@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+Categorie.destroy_all
+Statut.destroy_all
+Product.destroy_all
+Cat1 = Categorie.create(name: 'Produits utiles')
+puts 'Categorie created'
+Statut1 = Statut.create(name: 'Validée')
+puts 'Statuts created'
+Product1 = Product.create(stock: 100, description: 'Un produit très utile', name: 'Produit 1', sku: 1)
+puts 'Produits created'
