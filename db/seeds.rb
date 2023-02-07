@@ -9,9 +9,15 @@
 Categorie.destroy_all
 Statut.destroy_all
 Product.destroy_all
-Cat1 = Categorie.create(name: 'Produits utiles')
+Categorie.create!(name: 'Produits utiles')
 puts 'Categorie created'
-Statut1 = Statut.create(name: 'Validée')
+Statut.create!(name: 'Validée')
 puts 'Statuts created'
-Product1 = Product.create(stock: 100, description: 'Un produit très utile', name: 'Produit 1', sku: 1)
+Product.create!(
+  stock: 100,
+  description: 'Un produit très utile',
+  name: 'Produit 1',
+  sku: 1,
+  categorie_id: Categorie.find_by(name:"Produits utiles").id
+)
 puts 'Produits created'
