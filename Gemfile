@@ -48,7 +48,13 @@ gem "sassc-rails"
 # creation de la table user
 gem "devise"
 
+# boostrap
+gem "sassc-rails"
+
 gem "simple_form", github: "heartcombo/simple_form"
+
+gem "font-awesome-sass", "~> 6.1"
+
 
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
