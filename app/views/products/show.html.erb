@@ -1,1 +1,15 @@
-<%= Product.name %>
+<div>
+  <%= @product.name %>
+</div>
+<div>
+  <%= @product.description %>
+</div>
+<div>
+  'Stock restant:'<%= @product.stock %>
+</div>
+<div>
+  <%= form_with url: orders_path, data: {turbo: false} do %>
+    <%= hidden_field_tag 'product_id', @product.id %>
+    <%= submit_tag 'Add to cart', class: 'btn btn-primary' %>
+  <% end %>
+</div>

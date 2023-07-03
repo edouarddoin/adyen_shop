@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   # root "articles#index"
   root 'products#index'
   resources :products, only: [:new, :show, :index]
+
+  resources :orders, only: [:create]
 end
