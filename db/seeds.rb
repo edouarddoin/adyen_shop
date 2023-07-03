@@ -13,5 +13,10 @@ Cat1 = Categorie.create(name: 'Produits utiles')
 puts 'Categorie created'
 Statut1 = Statut.create(name: 'Validée')
 puts 'Statuts created'
-Product1 = Product.create(stock: 100, description: 'Un produit très utile', name: 'Produit 1', sku: 1)
+Product1 = Product.create(
+  stock: 100,
+  description: 'Un produit très utile',
+  name: 'Produit 1',
+  sku: 1,
+  categorie_id: Cat1.id)
 puts 'Produits created'
