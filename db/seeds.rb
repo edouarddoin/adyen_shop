@@ -20,3 +20,17 @@ Product1 = Product.create(
   sku: 1,
   categorie_id: Cat1.id)
 puts 'Produits created'
+Product2 = Product.create(
+  stock: 100,
+  description: 'Un produit très utile',
+  name: 'Produit 1',
+  sku: 1,
+  categorie_id: Cat1.id)
+puts 'Produits created'
+Product3 = Product.create(
+  stock: 100,
+  description: 'Un produit très utile',
+  name: 'Produit 1',
+  sku: 1,
+  categorie_id: Cat1.id)
+puts 'Produits created'
