@@ -7,9 +7,7 @@ class OrdersController < ApplicationController
 
   def create
     product = Product.find(params[:product_id])
-    order = Order.create(statut_id: 2, product: product.sku, user: current_user, product: product)
-    # For Stripe this is where I added the secret KEY
-    redirect_to
+    order = Order.create(statut_id: 2, user: current_user, product: product)
   end
 
   def show
