@@ -8,6 +8,12 @@ class OrdersController < ApplicationController
   def create
     product = Product.find(params[:product_id])
     order = Order.create(statut_id: 2, user: current_user, product: product)
+    # to correct during the next commit
+    # @order = Order.new(order_params)
+    # if @order.save
+    # redirect_to orders_path
+    # else
+    # render :new, status: :unprocessable_entity
   end
 
   def show
