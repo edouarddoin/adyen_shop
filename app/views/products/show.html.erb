@@ -7,9 +7,15 @@
 <div>
   'Stock restant:'<%= @product.stock %>
 </div>
+<%= @product.id %>
 <div>
-  <%= form_with url: orders_path, data: {turbo: false} do %>
-    <%= hidden_field_tag 'product_id', @product.id %>
-    <%= submit_tag 'Add to cart', class: 'btn btn-primary' %>
-  <% end %>
+<%= form_with url: orders_path, data: {turbo: false} do %>
+  <%= hidden_field_tag 'product_id', @product.id %>
+  <%= submit_tag 'Add to cart', class: 'btn btn-primary'%>
+<% end %>
+
+<%# <%= form_with url: orders_path, data: {turbo: false} do %>
+  <%# <%= hidden_field_tag 'product_id', @product.id %>
+  <%# <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+<%# <% end %>
 </div>

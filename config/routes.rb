@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   root 'products#index'
   resources :products, only: [:new, :show, :index]
 
-  resources :orders, only: [:create]
+  resources :orders, only: [:create, :show, :validation, :validate]
 end
