@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
   @products = []
+  skip_before_action :authenticate_user!, only: :index
+
   def new
     Product.new
   end
