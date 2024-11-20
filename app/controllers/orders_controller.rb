@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  @products = []
+  @order = []
 
   def validation
     statut == 'valide'
@@ -14,6 +14,10 @@ class OrdersController < ApplicationController
     # redirect_to orders_path
     # else
     # render :new, status: :unprocessable_entity
+  end
+
+  def new
+    @order = Order.new # Needed to instantiate the form_with
   end
 
   def show
